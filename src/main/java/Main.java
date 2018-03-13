@@ -5,8 +5,8 @@ import static spark.Spark.*;
 
 public class Main {
     public static void main(String[] args) {
-        Sbgnml2CdScript sbgnml2CdScript = new Sbgnml2CdScript();
-        Cd2SbgnmlScript cd2SbgnmlScript = new Cd2SbgnmlScript();
+        Cd2SbgnmlScript.convert("anchorPoints.xml", "anchorPoints.sbgn");
+        Sbgnml2CdScript.convert("samples/anchorPointsConverted.xml", "samples/anchorPoints.sbgn");
 
         get("/hello", (reg, res) -> "Hello World");
     }
