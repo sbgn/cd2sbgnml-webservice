@@ -1,14 +1,14 @@
 # cd2sbgnml-webservice
-An easily deployable small webservice to translate CellDesigner-SBGN-ML files with cd2sbgnml
+An easily deployable small webservice to translate CellDesigner-SBGN-ML files with cd2sbgnml. Choose a port number to deploy the web service, will be mentioned as ```your_port_number``` in this file
 
 # Sending Requests
 ## CellDesigner to SBGN-ML Conversion
 ```
-curl -X POST --data "xml=$(cat src/main/resources/example.xml)" http://localhost:4567/cd2sbgnml
+curl -X POST --data "xml=$(cat src/main/resources/example.xml)" http://localhost:your_port_number/cd2sbgnml
 ```
 ## SBGN-ML to CellDesigner Conversion
 ```
-curl -X POST --data "xml=$(cat src/main/resources/example.sbgn)" http://localhost:4567/sbgnml2cd
+curl -X POST --data "xml=$(cat src/main/resources/example.sbgn)" http://localhost:your_port_number/sbgnml2cd
 ```
 
 # Install 
@@ -29,5 +29,5 @@ mvn clean package assembly:single
 
 # Run webservice
 ```
-java -jar target/cd2sbgnml-webservice-0.1-jar-with-dependencies.jar 
+java -jar target/cd2sbgnml-webservice-0.1-jar-with-dependencies.jar your_port_number
 ```
