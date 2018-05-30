@@ -7,8 +7,13 @@ import static spark.Spark.*;
 
 public class Main {
     public static void main(String[] args) {
-        
-        port(Integer.parseInt(args[0]));
+
+        System.setProperty("org.eclipse.jetty.util.log.class", "org.eclipse.jetty.util.log.StdErrLog");
+        System.setProperty("org.eclipse.jetty.LEVEL", "OFF");
+
+        if (args.length != 0)
+            port(Integer.parseInt(args[0]));
+
         options("/*",
                 (request, response) -> {
 
