@@ -35,9 +35,9 @@ public class Main {
                 });
 
         before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
-        
+
         post("/cd2sbgnml", "application/xml", (req, res) -> {
-            String input = req.queryParams("xml");
+            String input = req.body();
 
             PrintWriter out = new PrintWriter("input.xml");
             out.println(input);
@@ -54,7 +54,7 @@ public class Main {
         });
 
         post("/sbgnml2cd", "application/xml", (req, res) -> {
-            String inputString = req.queryParams("xml");
+            String inputString = req.body();
 
             PrintWriter out = new PrintWriter("input.sbgn");
             out.println(inputString);
