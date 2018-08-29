@@ -1,5 +1,5 @@
 # cd2sbgnml-webservice
-An easily deployable small webservice to translate CellDesigner-SBGN-ML files with cd2sbgnml. Choose a port number to deploy the web service, will be mentioned as ```your_port_number``` in this file.
+An easily deployable webservice to translate CellDesigner and SBGN-ML files in both directions using [cd2sbgnml](https://github.com/sbgn/cd2sbgnml) library. Choose a port number to deploy the web service, will be mentioned as ```your_port_number``` in this file.
 
 **A sample deployment of this webservice can be found in [Newt](http://web.newteditor.org/) under the File menu. ```File | Import | CellDesigner```  imports a map in a CellDesigner file to SBGNML and displays in Newt. Similarly, one can export the current SBGN map into CellDesigner file using ```File | Export | CellDesigner File```.**
 
